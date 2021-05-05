@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="stylesheets/formulario.css">
+    <style> #edad { width: 30px; } </style>
+    <script type = "text/javascript" src = "js/form.js"></script>
+</head>
+<body>
+    <div class= "marco" style="width: 400px;">
+        <div class="titulos">
+            <h1>Contacto</h1>
+            <p>Completa tus datos.</p>
+        </div>
+        <form action="" method="post" class="formulario" id="form" name="form" 
+        onsubmit="return validateForm()" 
+        onreset="return clearForm()">
+            <fieldset class="infopersonal">
+            <legend>Información personal</legend>
+            <p>
+                <div class="labeldiv">
+                    <label>Nombre</label>
+                </div>
+                <input name="Nombre" type="text"/>
+            </p>
+            <p>
+                <div class="labeldiv">
+                    <label>Apellido</label>
+                </div>
+                <input name="Apellido" type="text"/>
+            </p>
+            <p>
+                <div class="labeldiv">
+                    <label>Edad</label>
+                </div>
+                <input name="Edad" id="edad" type="number"/>
+            </p>
+            <div class="labeldiv">
+                <label for="Género">Género:</label>
+            </div>
+            <select name="Género" >
+            <option value="">Seleccione opción</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Otro">Otro</option>
+            </select>
+            </fieldset>
+            <br>
+            <fieldset class="infoadicional">
+            <legend>Información adicional</legend>
+            <p>
+                <div class="labeldiv">
+                    <label>Empresa</label>
+                </div>
+                <input name="Empresa" type="text"/>
+            </p>
+            </fieldset>
+            <br>
+            <div class="divboton">
+                <input class="boton" type="submit" value="Enviar">
+            </div>
+            <br>
+            <div class="divboton">
+                <input class="boton" type="reset" value="Reset">
+            </div>
+        </form>
+        <br>
+        <p class="pie">
+            Diseñado por Marcos Chotsourian.<br>
+            <a class="mailto" href="mailto:chotsourian.marcos@gmail.com">chotsourian.marcos@gmail.com</a>
+        </p>
+    </div>
+</body>
+</html>
