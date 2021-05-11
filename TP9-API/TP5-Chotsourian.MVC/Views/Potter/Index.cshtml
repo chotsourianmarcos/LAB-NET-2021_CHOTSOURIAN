@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TP5_Chotsourian.MVC.Models.PotterView>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Listado de civilizaciones</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Género</th>
+                <th scope="col">Especie</th>
+                <th scope="col">Casa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var civ in Model)
+            {
+            <tr>
+                <th scope="row">@civ.name</th>
+                <td>@civ.gender</td>
+                <td>@civ.species</td>
+                <td>@civ.house</td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</body>
+</html>
