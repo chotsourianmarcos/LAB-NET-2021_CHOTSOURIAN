@@ -1,0 +1,31 @@
+<h3>Agregar o modificar territorios</h3>
+<hr>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <label>
+        TerritoryID
+        <br>
+        <input type="text" formControlName="TerritoryID">
+    </label>
+    <br>
+    <label>
+        TerritoryDescription:
+        <br>
+        <input type="text" formControlName="TerritoryDescription">
+    </label>
+    <br>
+    <label>
+        RegionID:
+        <br>
+        <input id="RegionID" type="number" formControlName="RegionID">
+    </label>
+    <br>
+    <button type="submit" [disabled]="!formulario.valid">Aceptar</button>
+    <br>
+    <button type="reset">Limpiar</button>
+</form>
+<br>
+<div class="condiciones">
+<p>*El TerritoryID debe ser un string de hasta 20 caracteres no existente aún.</p>
+<p>*El TerritoryDescription debe ser un string de hasta 50 caracteres.</p>
+<p>*El RegionID debe ser un int existente en la tabla de Regions (1, 2, 3 o 4).</p>
+</div>

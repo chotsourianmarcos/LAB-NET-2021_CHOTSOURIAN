@@ -1,0 +1,42 @@
+﻿@model List<TP5_Chotsourian.MVC.Models.TerritoriesView>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Listado de territorios</h1>
+    </div>
+    <h3>@Html.ActionLink("Agregar o actualizar territorio", "InsertUpdate", "Territories")</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">TerritoryID</th>
+            <th scope="col">TerritoryDescription</th>
+            <th scope="col">RegionID</th>
+            <th scope="col">Acción</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var territorie in Model)
+        {
+            <tr>
+                <th scope="row">@territorie.TerritoryID</th>
+                <td>@territorie.TerritoryDescription</td>
+                <td>@territorie.RegionID</td>
+                <td>@Html.ActionLink("Borrar Territorio", "Delete", new { id = territorie.TerritoryID })
+            </tr>
+        }
+        </tbody>
+
+    </table>
+</body>
+</html>

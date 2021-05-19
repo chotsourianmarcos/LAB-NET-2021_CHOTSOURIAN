@@ -1,0 +1,36 @@
+body{
+    margin: auto;
+    width: 804px;
+    height: auto;
+}
+.cabezal{
+    background-color: lightskyblue;
+    border: 2px solid rgb(93, 92, 92);
+    height: 50px;
+    text-align: center;
+    width: 800px;
+    margin: 0 0 0 0;
+    padding-top: 3%;
+}
+.cuerpo{
+    display: flex;
+    height: 450px;
+}
+.agregmodif{
+    float: left;
+    background-color: darkkhaki;
+    border: 1px solid rgb(93, 92, 92);
+    width: 300px;
+    margin: 0 0 0 0;
+    padding-top: 2%;
+    text-align: center;
+}
+.lista{
+    float: right;
+    background-color: lemonchiffon;
+    border: 1px solid rgb(93, 92, 92);
+    width: 500px;
+    margin: 0 0 0 0;
+    padding-top: 2%;
+    text-align: center;
+}

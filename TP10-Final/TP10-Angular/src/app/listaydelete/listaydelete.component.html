@@ -1,0 +1,31 @@
+<div class="lista">
+  <h3>Lista de territorios</h3>
+  <hr>
+  <tr class="tablehead">
+    <th class="columna1">TerritoryID</th>
+    <th class="columna2">TerritoryDescription</th>
+    <th class="columna3">RegionID</th>
+    <th class="columna4">Acción</th>
+  </tr>
+  <div class="table-container">
+    <table mat-table [dataSource]="territoriesList" class="mat-elevation-z8">
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>TerritoryID</th>
+        <td mat-cell *matCellDef="let element"> {{element.TerritoryID}} </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>TerritoryDescription</th>
+        <td mat-cell *matCellDef="let element"> {{element.TerritoryDescription}} </td>
+      </ng-container>
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>RegionID</th>
+        <td mat-cell *matCellDef="let element"> {{element.RegionID}} </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef>Acción</th>
+        <td mat-cell *matCellDef="let element"><button (click)="onDelete(element.TerritoryID)">Delete</button></td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+    </table>
+  </div>
+</div>
